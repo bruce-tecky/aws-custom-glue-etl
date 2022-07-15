@@ -63,6 +63,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 aws configure
 ```
+(Pls refer to [Internal] project share drive (/Enki's current info/Credential) for the Keys below)
 ```
 AWS Access Key ID [None]: <type key ID here>
 AWS Secret Access Key [None]: <type access key>
@@ -71,6 +72,7 @@ Default output format [None]: <leave blank>
 ```
 
 3. +/- Install AWS-CDK toolkit
+(alternatively, if aws-cdk is installed only in project folder, you need to use ```npx cdk```)
 ```bash
 sudo npm install -g aws-cdk
 ```
