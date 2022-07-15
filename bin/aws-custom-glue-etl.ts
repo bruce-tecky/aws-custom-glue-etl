@@ -21,16 +21,3 @@ const app = new App();
 new AwsCustomGlueEtlStack(app, 'AwsCustomGlueEtlStack');
 
 
-
-/* 
-source:
-https://github.com/awslabs/aws-solutions-constructs/tree/main/source/use_cases/aws-custom-glue-etl
-
-Outputs:
-AwsCustomGlueEtlStack.GlueJob = CustomETLKinesisETLJob04F57-JEUy744HVi2g
-AwsCustomGlueEtlStack.JobRole = arn:aws:iam::576021032212:role/AwsCustomGlueEtlStack-CustomETLJobRole53A1671F-1SUPGLOTNO6X8
-AwsCustomGlueEtlStack.KinesisStreamName = AwsCustomGlueEtlStack-CustomETLKinesisStreamB4F1869F-OuDOOE2XaUVT
-Stack ARN:
-arn:aws:cloudformation:ap-southeast-1:576021032212:stack/AwsCustomGlueEtlStack/ae65b390-0432-11ed-9568-0647bab7fb5a
-
-*/
