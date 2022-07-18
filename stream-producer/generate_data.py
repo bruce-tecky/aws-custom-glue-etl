@@ -19,6 +19,7 @@ import json
 import os
 import random
 import sys
+from time import sleep
 
 import boto3
 from faker import *
@@ -100,7 +101,7 @@ def main():
         kinesis_client = session.client("kinesis", args.region)
 
         # Rate at which records are generated
-        rate = 500
+        rate = 1
         generator = RecordGenerator()
 
         # Generates ventilator data
@@ -108,6 +109,7 @@ def main():
             fake_ventilator_records = generator.get_ventilator_records(rate, fake)
             print(fake_ventilator_records)
             kinesis_client.put_records(StreamName=args.stream_name, Records=fake_ventilator_records)
+            sleep(5)
             # fakeIO = StringIO()
             # fakeIO.write(str(''.join(dumps_lines(fake_ventilator_records))))
             # fakeIO.close()
